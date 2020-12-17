@@ -1,0 +1,115 @@
+.location-form{
+    padding-top:16px;
+    padding-bottom:32px;
+    @include pad{
+        padding-top:8px;
+        padding-bottom:24px;
+    }
+    @include mobile{
+        padding-bottom:20px;
+    }
+    label{
+        font-size: $font-size-3;
+        font-weight: bold;
+        margin-right: 20px;
+        @include pad{
+            font-size: $font-size-2;
+        }
+        @include mobile{
+            font-size: $font-size-sm;
+            margin-right: 12px;
+        }
+    }
+    select{
+        font-size: 18px;
+        padding:10px 20px;
+        width: 324px;
+        height: 45px;
+        border-radius: 2px;
+        border: 1px solid #CED4DA;
+        line-height: 1;
+        @include pad{
+            font-size: $font-size-2;
+            padding:12px 16px;
+            width: 237px;
+            height: 46px;
+        }
+        @include mobile{
+            font-size: $font-size-sm;
+            padding:8px 16px;
+            width: 250px;
+            height: 36px;
+        }
+    }
+}
+.location-card{
+    margin-bottom: 272px;
+    @include pad{
+        margin-bottom: $margin-size-10;
+    }
+    @include mobile{
+        padding-bottom:$margin-size-5;
+    }
+    .card-items{
+        margin-bottom: $margin-size-4;
+        @include pad{
+            margin-bottom: $margin-size-3;
+        }
+        @include mobile{
+            margin-bottom: $margin-size-2;
+        }
+        @include mobile-374{
+            max-width: 290px;
+        }
+        >img{
+            width: 100%;
+            height: 224px;
+            display: block;
+            object-fit: cover;
+        }
+    }
+    h3{
+        font-size: $font-size-3;
+        padding: 12px 24px;
+        border-bottom: 1px solid #00000020;
+        @include pad{
+            font-size: $font-size-2;
+            padding:8px 16px;
+        }
+    }
+    .card-infor{
+        padding:16px 24px;
+        border-bottom: 1px solid #00000020;
+        li{
+            display: flex;
+        }
+        img{
+            width: 20px;
+            margin-right: $margin-size-2;
+        }
+        p{
+            font-size: $font-size-md;
+            @include pad{
+                font-size: $font-size-sm;
+            }
+        }
+        :nth-child(1), :nth-child(2){
+            margin-bottom: $margin-size-base;
+        }
+    }
+    .card-btn{
+        display: block;
+        text-decoration: none;
+        background-color:$black;
+        color: $white;
+        font-size: $font-size-md;
+        padding:20px 0;
+        @include pad{
+            font-size: $font-size-sm;
+            padding:16px 0;
+        }
+        &:hover{
+            background-color: $primary;
+        }
+    }
+}

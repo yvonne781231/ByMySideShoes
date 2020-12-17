@@ -1,0 +1,502 @@
+/*banner*/
+.banner-index{
+    background-image: url(../images/banner.png);
+    @include bg-img-cover-no-repeat;
+    height: 840px;
+    text-align: right;
+    @include pad{
+        background-image: url(../images/banner-sm.png);
+    }
+    @include mobile{        
+    }
+    p{
+        font-size: $font-size-lg;
+        @include pad{
+            font-size:$font-size-md;
+        }
+        @include mobile{
+            font-size: $font-size-2;
+        }
+    }
+    h2{
+        font-size: $font-size-8;
+        font-weight: bold;
+        @include pad{
+            font-size: $font-size-6;
+        }
+        @include mobile{
+            font-size:$font-size-4;
+        }
+    }
+}
+/*service*/
+.profession{
+    @extend %silder-space;
+    .profession-group{
+        padding:0 69px;
+        align-items: baseline;
+        @include pad{
+            padding:0 47px;
+        };
+        @include mobile{
+            padding:0 54px;
+        }
+    }
+    .profession-item{
+        width: 19%;
+        padding: 0 auto;
+        
+        @include pad{
+            width: 45%;  
+            margin-bottom:$margin-size-5;  
+        };
+        @include mobile{
+            width: 100%;            
+        };
+    }
+    img{
+        margin-bottom: $margin-size-4;
+        @include pad{
+            margin-bottom: $margin-size-2;
+        }
+    }
+    h4{
+       font-size: $font-size-3;
+       font-weight: bold;
+       margin-bottom: $margin-size-base;
+       @include pad{
+           font-size: $font-size-md;
+       }
+       @include mobile-374{
+        font-size: $font-size-sm;
+    } 
+    }
+    p{
+        font-size: $font-size-2;
+        text-align: left;
+        @include mobile-374{
+            font-size: $font-size-sm;
+        }
+    }
+}
+/*series*/
+.series{
+    @extend %silder-space;
+    .series-item{
+        a{
+            text-decoration: none;
+        };
+        img{
+            max-width: 635px;
+            height: auto;
+            transition: all 0.5s ease-in;  
+            @include pad{
+                max-width: 390px;
+            }
+            @include mobile{
+                max-width: 345px;
+            }
+            @include mobile-374{
+                max-width: 290px;
+            }
+        };
+        margin-bottom: $margin-size-4;
+        @include pad{
+            margin-bottom: $margin-size-base;
+        }
+        .series-casual{
+            @include pad{
+                flex-direction: row;
+            }
+        }
+    }
+}
+
+.series-heels, .series-casual, .series-functional{
+    @include mobile{
+        position: relative;
+        justify-content: center;
+    }
+    img{
+        filter:grayscale(1);
+    }
+}
+.series-topic{
+    padding:0 30px;
+    transition: all 0.5s ease-in;  
+    @include mobile{
+        padding:0px 0px;
+        position: absolute;  
+        justify-content:center;      
+    }
+    h4{
+        text-transform:uppercase;
+        font-style: italic;
+        font-weight: bold;
+        font-size: $font-size-6;
+        line-height: $font-size-6;
+        color: $primary;
+        transition: all 0.5s ease-in;  
+        @include pad{
+            font-size: 28px;
+        }
+        @include mobile{
+            color: $white;
+            text-shadow: 2px 3px 6px #000;
+        }
+        
+    };
+}
+
+.series-icon-diamond{
+    background-image: url(../images/icon-diamond.svg);
+    width: 48px;
+    height: 37.73px;
+    @include svg-icon-hover-setting;      
+    @include pad{
+        width: 32px;
+        height: 25.16px;
+    }
+    @include mobile{
+        background-image: url(../images/icon-diamond-white.svg);
+        width: 32px;
+        height: 25.16px;
+    }
+}
+
+.series-heels:hover{
+    .series-icon-diamond{
+        background-image: url(../images/icon-diamond-black.svg);
+    };
+    h4{
+        color:$black;
+    }
+    img{
+        filter:grayscale(0);
+    }
+    .series-topic{
+        position: relative;
+        top: 3px;
+        left: 3px;
+    };
+};
+
+.series-icon-sun{
+    background-image: url(../images/icon-sun.svg);
+    width: 48px;
+    height: 48px;
+    @include svg-icon-hover-setting;      
+    @include pad{
+        width: 32px;
+        height: 32px;
+    }
+    @include mobile{
+        background-image: url(../images/icon-sun-white.svg);
+        width: 32px;
+        height: 32px;
+    }
+}
+.series-casual:hover{
+    .series-icon-sun{
+        background-image: url(../images/icon-sun-black.svg);
+    }
+    h4{
+        color:$black;
+    }
+    img{
+        filter:grayscale(0);
+    }
+    .series-topic{
+        position: relative;
+        top: 3px;
+        left: 3px;
+        @include mobile{
+            position: static;
+            top:0px;
+            left:0px;
+        }
+    };
+};
+.series-icon-thunder{
+    background-image: url(../images/icon-thunder.svg);
+    width: 35.2px;
+    height: 48px;
+    @include svg-icon-hover-setting;      
+    @include pad{
+        width: 23px;
+        height: 32px;
+    }
+    @include mobile{
+        background-image: url(../images/icon-thunder-white.svg);
+        width: 23px;
+        height: 32px;
+    }
+}
+.series-functional:hover {
+    .series-icon-thunder{
+        background-image: url(../images/icon-thunder-black.svg);
+    }
+    h4{
+        color:$black;
+    }
+    img{
+        filter:grayscale(0);
+    }
+    .series-topic{
+        position: relative;
+        top: 3px;
+        left: 3px;
+    };
+};
+
+/*block*/
+.jumbotron-fluid{
+    background-image: url(../images/bg.png);
+    @include bg-img-cover-no-repeat;
+    background-position: center;
+    height: auto;
+}
+.block {
+    @extend %silder-space;
+}
+.block-menu {
+    @include mobile{
+        flex-direction: column;
+        align-items: center;
+    }
+    .block-son{
+        background-image: url(../images/product-8.png);
+        @include bg-img-cover-no-repeat;        
+        width: 540px;
+        height: 472px;
+        position: relative;
+        transition: all 0.3s ease;
+        &:hover{
+            .block-item{
+                opacity: 0;
+            }
+            h4{
+                color:$white;
+                text-shadow: 2px 2px 6px #000;
+            }
+        }
+        @include pad{
+            width: 330px;
+            height: 280px;
+        }
+        @include mobile{
+            width: 345px;
+            height: 284px;
+            margin-bottom: $margin-size-2;
+        }
+        @include mobile-374{
+            width: 290px;
+            height: 274px;
+        }
+    }  
+    .block-daughter{
+        background-image: url(../images/product-9.png);
+        @include bg-img-cover-no-repeat;        
+        width: 540px;
+        height: 472px;
+        position: relative;        
+        &:hover{
+            .block-item{
+                opacity: 0;
+            }
+            h4{
+                color:$white;
+                text-shadow: 2px 2px 6px #000;
+            }
+        }
+        @include pad{
+            width: 330px;
+            height: 280px;
+        }
+        @include mobile{
+            width: 345px;
+            height: 284px;
+            margin-bottom: $margin-size-2;
+        }
+        @include mobile-374{
+            width: 290px;
+            height: 274px;
+        }
+    }
+     
+    .block-item{
+        background-color: #fff;
+        opacity:0.5;
+        width: 100%;
+        height: 100%;
+        position:absolute;
+        transition: all 0.5s ease-in;
+    }  
+    h4{
+        color: $primary; 
+        font-size: $font-size-9;
+        font-weight: bold;
+        position: absolute;   
+        transition: all 0.5s ease-in;     
+        @include pad{
+            font-size: $font-size-4;
+        }
+    }
+    a{
+        width: 100%;
+        height: 100%;
+        position:absolute;
+    }
+}
+//card
+.card{
+    @extend %silder-space;
+    .card-items{
+        margin-bottom: $margin-size-4;
+        border: 1px solid $lonely;
+        transition:all 0.5s ease-in;
+        @include pad{
+            width: 48%;
+            margin-bottom: $margin-size-3;
+        }
+        @include mobile{
+            width: 100%;
+            margin-bottom: $margin-size-2;
+        }
+        @include mobile-374{
+            max-width: 290px;
+        }
+        img{
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        >a{
+            text-decoration: none;
+            color:$black;
+        }
+        &:hover{
+            box-shadow: 3px 3px 10px $lonely;
+            position: relative;
+            top: 2px;
+            left: 2px;
+        }
+    }
+    .card-content{
+        padding:16px;
+        font-size: $font-size-sm;
+        h4{
+            margin-bottom: $margin-size-base;
+        }
+        p{
+            font-size: $font-size-2;
+            margin-bottom: $margin-size-2;
+        }
+        span{
+            color:$lonely-dark;
+        }
+    }
+}
+
+// form
+.form{
+    @extend %silder-space;
+    max-width: 730px;
+    margin:0 auto;
+    @include pad{
+        max-width: 450px;
+    }
+    @include mobile{
+        max-width: 345px;
+    }
+    @include mobile-374{
+        max-width: 290px;
+    }
+    p{
+        font-size: $font-size-md;
+        margin-bottom: 20px;
+        @include pad{
+            font-size: $font-size-2;
+            margin-bottom: 12px;
+        }
+        @include mobile{
+            margin-bottom: $margin-size-base;
+        }
+    }
+    label{
+        font-size: $font-size-2;
+        @include pad{
+            font-size: $font-size-base;
+        }
+    }
+    input, textarea{
+        width: 730px;
+        font-size: $font-size-2;
+        color:$primary-dark;
+        padding:16px 16px;
+        margin-bottom: $margin-size-2;
+        @include pad{
+            width: 450px;
+            margin-bottom: $margin-size-base;
+            font-size: $font-size-base;
+        }
+        @include mobile{
+            width: 345px;
+        }
+        @include mobile-374{
+            width: 290px;
+        }
+    }
+    .form-feedback{
+        height: 136px;
+        @include pad{
+            height: 100px;
+        }
+    }
+    .form-check{        
+        margin-bottom: 42px;
+        @include pad{
+            margin-bottom: 20px;
+        }
+        @include mobile{
+            margin-bottom: $margin-size-3;
+        }        
+        .form-checkbox{
+            width: 24px;
+            height: 24px;
+            margin-right: 4px;            
+        }
+        span{
+            text-align: left;
+            font-size: $font-size-2;
+            @include pad{
+                font-size: $font-size-sm;
+            }
+        }
+    } 
+    .form-submit{
+        width: 350px;
+        height: 54px;
+        padding: 0 0;
+        color:$white;
+        background-color: $primary;
+        border: 1px solid $primary-dark;
+        display: block;
+        margin: 0 auto;
+        transition: all 0.5s ease-in;
+        &:hover{
+            background-color: $primary-dark;
+            position: relative;
+            top: 2px;            
+        }
+        @include pad{
+            width: 210px;
+            height: 36px;
+        }
+        @include mobile{
+            width: 165px;
+            
+        }
+    }   
+    
+}

@@ -1,0 +1,120 @@
+.footer{
+    padding-top: 32px;
+    padding-bottom: 8px;
+    a{
+        @include underline-none-and-hover;
+        color: $white;
+    }
+}
+
+.contacts{
+    padding: 4px 0;
+    border-bottom: 1px solid #ffffff;
+    li{
+        margin-bottom: $margin-size-2;
+    }
+    .navbar{
+        width: 100%;
+        @include mobile{
+            display: none;
+        }
+        a{  display: block;
+            padding:0 24px;
+            font-size: $font-size-2;
+            &:hover{
+                background-color: $primary;
+            }
+        }
+        margin-bottom: $margin-size-4;
+    }
+    
+}
+.socialmedia-logo{
+    width:20%;
+    @include pad{
+        width: 15%;
+    }
+    @include mobile{
+        width: 30%;
+    }
+    img{
+        @include pad{
+            width: 24px;
+            height: auto;
+            }
+        }
+    }
+.contacts-menu{
+    font-size: $font-size-4;
+    @include pad{
+        font-size: $font-size-md;
+    }
+    @include mobile{
+        font-size: $font-size-2;
+    }
+    img{
+        margin-right: 12px;
+        @include pad{
+            width: 32px;
+            height: auto;
+        }
+        @include mobile{
+            width: 20px;
+            height: auto;
+        }
+    }
+}
+.footer-infor{
+    padding: 24px 0;
+    @include mobile{
+        flex-direction: row-reverse;
+        align-items:flex-end;
+    }
+    >a{
+        @include pad{
+            display: none;
+        }
+        @include mobile{
+            display:flex;
+        }
+        img{
+            @include mobile{
+            width: 42px;
+            height: auto;
+            }
+        }
+    }
+    .copyright{
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        @include pad{
+            width: 100%;
+        }
+        @include mobile{
+            flex-direction: column;
+        }
+        p{
+            font-size: $font-size-2;
+            @include mobile{
+                font-size: $font-size-sm;
+            }
+            margin-bottom: $margin-size-base;
+        }
+        ul{
+            width: 20%;
+            display: flex;
+            justify-content: space-between;
+            font-size: $font-size-sm;
+            @include mobile{
+                flex-direction: column;
+                width: 100%;
+            }
+            li{
+                @include mobile{
+                    margin-bottom: $margin-size-base;
+                }
+            }
+        }
+    }
+}

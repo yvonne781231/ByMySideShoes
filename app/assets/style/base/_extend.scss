@@ -1,0 +1,9 @@
+%silder-space{
+        @include top-and-bottom-space-pc;
+        @include pad{
+            @include top-and-bottom-space-pad;
+        };
+        @include mobile{
+            @include top-and-bottom-space-mobile;
+        };
+}

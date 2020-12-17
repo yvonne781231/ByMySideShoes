@@ -1,0 +1,10 @@
+.mr-md-4{
+    @include pad{
+        margin-right: $margin-size-4;
+    }
+}
+.mr-sm-0{
+    @include mobile{
+        margin-right: 0px;
+    }
+}
